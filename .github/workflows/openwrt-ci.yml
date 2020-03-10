@@ -148,6 +148,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-flowoffload=y
           CONFIG_PACKAGE_luci-app-S-S R-plus=y
+          CONFIG_PACKAGE_luci-app-sfe=y
+          CONFIG_PACKAGE_luci-app-upnp=y
           EOF
 
           # LuCI主题:
@@ -156,9 +158,9 @@ jobs:
           EOF
 
           # 常用软件包:
-          #cat >> .config <<EOF
-          #CONFIG_PACKAGE_wget=y
-          #EOF
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_wget=y
+          EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF
